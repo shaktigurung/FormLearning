@@ -1,0 +1,37 @@
+<h1>New Book</h1>
+<%= render 'form', book: @book %> 
+<!--
+<%# <form action = "/books" method = "post">
+ <input type="hidden" name= "authenticity_token" value="<%= form_authenticity_token %>">
+ <div>
+    <label>Title</label>
+    <input type= "text" name= "book[title]">
+</div>
+ <div>
+    <label>Published</label>
+    <input type= "date" name= "book[published]">
+</div>
+ <div>
+    <label>Sales</label>
+    <input type= "number" name= "book[sales]">
+</div>
+ <div>
+    <label>Genre</label>
+    <select name = "book[genre]">
+        <option value="1"> Thriller</option> 
+        <option value="2" >Romcom</option> 
+        <option value="3"> Drama</option> 
+        <option value="4">Horror</option> 
+    </select> %>
+</div>
+<input type="submit" value="Create New Book">
+</form>
+-->
+<div>
+<h2>Parameters</h2>
+<%= @params %>
+<h2>Books</h2>
+<%= @book[:title] %>
+<%= @book[:genre] %>
+</div>
+<%= link_to 'Back', books_path %>
